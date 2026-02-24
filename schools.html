@@ -10,33 +10,45 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-<header class="site-header">
+<main class="schools-container">
   <h1>Find Trade Schools</h1>
-  <p>Search by trade and state to find schools and apprenticeships.</p>
-</header>
+  <p class="subtitle">Search for accredited trade schools by trade</p>
 
-<main class="quiz-container">
-  <label>Trade</label>
-  <select id="tradeFilter">
-    <option value="">All Trades</option>
-    <option value="electrician">Electrician</option>
-    <option value="hvac">HVAC</option>
-    <option value="welding">Welding</option>
-  </select>
+  <div class="filter-bar">
+    <select id="tradeFilter">
+      <option value="all">All Trades</option>
+      <option value="electrician">Electrician</option>
+      <option value="plumbing">Plumbing</option>
+      <option value="automotive">Automotive</option>
+      <option value="hvac">HVAC</option>
+      <option value="welding">Welding</option>
+      <option value="carpentry">Carpentry</option>
+    </select>
+  </div>
 
-  <label>State</label>
-  <select id="stateFilter">
-    <option value="">All States</option>
-    <option value="CA">California</option>
-    <option value="TX">Texas</option>
-    <option value="FL">Florida</option>
-    <option value="NY">New York</option>
-  </select>
+  <div class="school-grid">
+    <div class="school-card" data-trade="electrician">
+      <h3>ABC Trade Institute</h3>
+      <p>Trade: Electrician</p>
+      <p>Location: Nationwide</p>
+      <a href="#" class="apply-btn">View Program</a>
+    </div>
 
-  <div id="schoolList" style="margin-top:1.5rem"></div>
+    <div class="school-card" data-trade="plumbing">
+      <h3>PlumbPro Academy</h3>
+      <p>Trade: Plumbing</p>
+      <p>Location: Texas</p>
+      <a href="#" class="apply-btn">View Program</a>
+    </div>
+
+    <div class="school-card" data-trade="hvac">
+      <h3>HVAC Tech School</h3>
+      <p>Trade: HVAC</p>
+      <p>Location: California</p>
+      <a href="#" class="apply-btn">View Program</a>
+    </div>
+  </div>
 </main>
-
-<script src="js/schools.js"></script>
 </body>
 </html>
 
