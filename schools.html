@@ -9,6 +9,21 @@
   <title>Find Trade Schools | TradePath Academy</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
+  <script>
+  const filter = document.getElementById("tradeFilter");
+  const cards = document.querySelectorAll(".school-card");
+
+  filter.addEventListener("change", () => {
+    const value = filter.value;
+
+    cards.forEach(card => {
+      card.style.display =
+        value === "all" || card.dataset.trade === value
+          ? "block"
+          : "none";
+    });
+  });
+</script>
 <body>
 <main class="schools-container">
   <h1>Find Trade Schools</h1>
