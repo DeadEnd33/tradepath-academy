@@ -3,27 +3,89 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Trade Career Quiz | TradePath Academy</title>
-
-  <!-- Main site styles -->
-  <link rel="stylesheet" href="css/style.css" />
+  <title>Trade Career Quiz</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Header -->
-  <header class="site-header">
-    <h1>Trade Career Quiz</h1>
-    <p>Answer honestly — we’ll show your <strong>top 3 trade matches</strong>.</p>
-  </header>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-brand">TradePath Academy</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="schools.html">Schools</a>
+    </div>
+  </nav>
 
-  <!-- Quiz Container -->
+  <!-- QUIZ CONTAINER -->
   <main class="quiz-container">
-    <div id="quiz"></div>
-    <button id="nextBtn">Next</button>
+    <h1>Trade Career Quiz</h1>
+    <p class="subtitle">Answer a few questions to find your best trade</p>
+
+    <form id="quizForm">
+
+      <div class="question">
+        <h3>1. What kind of work do you enjoy?</h3>
+        <label><input type="radio" name="q1" value="electrician" required> Working with wiring & systems</label><br>
+        <label><input type="radio" name="q1" value="plumbing"> Working with pipes & water</label><br>
+        <label><input type="radio" name="q1" value="automotive"> Working on vehicles</label><br>
+        <label><input type="radio" name="q1" value="hvac"> Heating & cooling systems</label>
+      </div>
+
+      <div class="question">
+        <h3>2. Where would you prefer to work?</h3>
+        <label><input type="radio" name="q2" value="carpentry" required> Construction sites</label><br>
+        <label><input type="radio" name="q2" value="automotive"> Garage or shop</label><br>
+        <label><input type="radio" name="q2" value="hvac"> Indoors & outdoors</label><br>
+        <label><input type="radio" name="q2" value="welding"> Industrial environments</label>
+      </div>
+
+      <div class="question">
+        <h3>3. What matters most to you?</h3>
+        <label><input type="radio" name="q3" value="electrician" required> High pay</label><br>
+        <label><input type="radio" name="q3" value="plumbing"> Job security</label><br>
+        <label><input type="radio" name="q3" value="carpentry"> Creativity</label><br>
+        <label><input type="radio" name="q3" value="hvac"> Problem solving</label>
+      </div>
+
+      <button type="submit" class="cta">See My Result</button>
+    </form>
+
+    <div id="result" class="result"></div>
   </main>
 
-  <!-- Quiz Logic -->
-  <script src="js/quiz.js"></script>
+  <!-- QUIZ SCRIPT -->
+  <script>
+    const form = document.getElementById("quizForm");
+    const resultDiv = document.getElementById("result");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const answers = [
+        form.q1.value,
+        form.q2.value,
+        form.q3.value
+      ];
+
+      const score = {};
+
+      answers.forEach(answer => {
+        score[answer] = (score[answer] || 0) + 1;
+      });
+
+      const bestTrade = Object.keys(score).reduce((a, b) =>
+        score[a] > score[b] ? a : b
+      );
+
+      resultDiv.innerHTML = `
+        <h2>Your Best Match:</h2>
+        <p class="trade-result">${bestTrade.toUpperCase()}</p>
+        <a href="schools.html" class="cta">Find Schools</a>
+      `;
+    });
+  </script>
 
 </body>
 </html>
