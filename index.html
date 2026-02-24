@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TradePath Academy</title>
+  <meta name="description" content="Find the right trade, enroll in the best school, and plan a successful trade career." />
+  <style>
+    :root {
+      --primary: #0f766e;
+      --secondary: #14b8a6;
+      --dark: #0f172a;
+      --light: #f8fafc;
+      --muted: #64748b;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    header h1 { font-size: 3rem; margin-bottom: 1rem; }
+    header p { font-size: 1.25rem; max-width: 700px; margin: auto; }
+
+    .cta {
+      margin-top: 2rem;
+      display: inline-block;
+      background: white;
+      color: var(--primary);
+      padding: 0.75rem 1.5rem;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section { padding: 4rem 2rem; max-width: 1100px; margin: auto; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background: white;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    }
+
+    .card h3 { margin-bottom: 0.75rem; }
+
+    .muted { color: var(--muted); }
+
+    .steps li {
+      margin-bottom: 0.75rem;
+    }
+
+    footer {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 4rem;
+    }
+
+    footer p { font-size: 0.9rem; color: #cbd5f5; }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 2.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <header>
+    <h1>TradePath Academy</h1>
+    <p>Discover the right trade for you, enroll in the best school, and build a future-proof career without college debt.</p>
+    <a href="#quiz" class="cta">Start the Trade Quiz</a>
+  </header>
+
+  <!-- HOW IT WORKS -->
+  <section>
+    <h2>How It Works</h2>
+    <p class="muted">A clear step-by-step path from interest to career.</p>
+    <div class="grid" style="margin-top:2rem">
+      <div class="card">
+        <h3>1. Explore Trades</h3>
+        <p>Learn about careers like electrician, HVAC, welding, plumbing, automotive tech, and more.</p>
+      </div>
+      <div class="card">
+        <h3>2. Find the Right School</h3>
+        <p>Compare trade schools, apprenticeships, certifications, and training programs.</p>
+      </div>
+      <div class="card">
+        <h3>3. Plan Your Career</h3>
+        <p>We help you plan income goals, certifications, and long-term growth.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUIZ -->
+  <section id="quiz">
+    <h2>Trade Career Quiz</h2>
+    <p class="muted">Answer a few questions to see which trade fits you best.</p>
+    <div class="card" style="margin-top:2rem">
+      <p><strong>Coming soon:</strong> interactive quiz that matches interests, skills, and salary goals.</p>
+      <p class="muted">(This will later connect to a database or form tool.)</p>
+    </div>
+  </section>
+
+  <!-- PROGRAMS -->
+  <section>
+    <h2>Programs & Support</h2>
+    <div class="grid" style="margin-top:2rem">
+      <div class="card">
+        <h3>Free Path</h3>
+        <ul class="steps">
+          <li>✔ Trade exploration guides</li>
+          <li>✔ Salary & demand data</li>
+          <li>✔ Enrollment checklists</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Guided Path</h3>
+        <ul class="steps">
+          <li>✔ School recommendations</li>
+          <li>✔ Application guidance</li>
+          <li>✔ Financial planning</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Pro Career Path</h3>
+        <ul class="steps">
+          <li>✔ 1-on-1 coaching</li>
+          <li>✔ Resume & interview prep</li>
+          <li>✔ Job placement strategy</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FUTURE -->
+  <section>
+    <h2>Plan for the Future</h2>
+    <p class="muted">Trades aren't just jobs — they're careers.</p>
+    <div class="card" style="margin-top:2rem">
+      <p>We help you plan certifications, business ownership, union paths, and income growth over 5–10 years.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 TradePath Academy. All rights reserved.</p>
+    <p>Built for students, career switchers, and future tradespeople.</p>
+  </footer>
+
+</body>
+</html>
